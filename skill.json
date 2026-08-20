@@ -1,0 +1,38 @@
+{
+  "name": "genpark-engineering-sprint-cycle-bottleneck-prediction-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Git commit velocity analyzer, PR review latency forecaster & engineering sprint blocker predictor.",
+  "author": "genpark",
+  "category": "engineering",
+  "tags": [
+    "sprint-analytics",
+    "pr-bottlenecks",
+    "engineering-velocity",
+    "linear",
+    "project-management"
+  ],
+  "inputs": {
+    "sprint_id": {
+      "type": "string"
+    },
+    "open_pr_count": {
+      "type": "integer"
+    },
+    "cycle_days_remaining": {
+      "type": "integer"
+    }
+  },
+  "outputs": {
+    "sprint_completion_probability_pct": {
+      "type": "number"
+    },
+    "isolated_blockers": {
+      "type": "array"
+    },
+    "recommended_workload_rebalancing": {
+      "type": "string"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
